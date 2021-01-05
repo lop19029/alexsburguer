@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta lang="en-US">
+        <title>Alex's Burguer</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <style>
+            input[list]{
+              margin-left:auto;
+              margin-right:auto;
+              max-width: 500px;
+              background: #fbfffe;
+              padding: 20px 20px 20px 20px;
+              font-family: 'Raleway', sans-serif;
+              color: #1b1b1e;}
+            label{
+              font-family: 'Raleway', sans-serif;
+              color: #fbfffe; }
+            legend{font-family: 'Zilla Slab Highlight', cursive; 
+              color: #fbfffe; 
+              background-color: #1b1b1e;
+              font-size: 1.5em;}
+            p{
+              font-family: 'Montserrat', sans-serif; 
+              color: #fbfffe; 
+              font-size:1.1em;}
+            input[type=text]{
+              padding: 12px 20px;
+              margin: 8px 0;
+              display: inline-block;
+              border: 1px solid #fbfffe;
+              border-radius: 4px;
+              box-sizing: border-box;}
+            select {
+              font-family: 'Raleway', sans-serif;
+              max-width: 500px;
+              padding: 16px 20px;
+              border: none;
+              border-radius: 4px;
+              background-color:#fbfffe}
+            #burger{
+                width: 100%;
+              font-family: 'Zilla Slab', serif;
+              color: #96031a;
+              font-size: 2em;}
+            textarea {
+              width: 100%;
+              height: 150px;
+              padding: 12px 20px;
+              box-sizing: border-box;
+              border-radius: 4px;
+              background-color: #fbfffe;
+              resize: none;}
+            a:hover{color: #faa916;}
+            table{
+              color: #fbfffe;
+              border-collapse: collapse;
+              width: 100%;}
+            th, td {
+              text-align: left;
+              padding: 8px;}
+            th{
+              font-family: 'Zilla Slab', serif;
+              font-size: 1.3em;}
+            td{
+              font-family: 'Montserrat', sans-serif;
+              font-size: 1em;}
+            tr:nth-child(even) {background-color: #96031a;}
+
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <a href="assign04.html"><img id="logo" src="logo.png" alt="brand logo" width="200px" height="200px"></a>
+            <nav class="page_nav">
+                <a id="nav" href="#order"><b>PLACE YOUR ORDER NOW!</b></a>
+            </nav>
+            <hr>
+        </div>
+        <div id="menu">
+            <img src="menu.png" alt="Restaurant menu" width = "100%">
+        </div>
+        <div class="order_form">
+            <form id="order">
+                <fieldset id="orderInfo">
+                    <legend class="legend"><b>Place your order (one per person)</b></legend>
+                    <p><b>1. Choose your burguer:</b></p>
+                    <select id="burger" name="burger">
+                        <option value="AC">Alex's Classic</option>
+                        <option value="AB">Alex's Baconator</option>
+                        <option value="ABC">Alex's Big Classic</option>
+                        <option value="ABDC">Alex's Big Double Classic</option>
+                        <option value="AHDC">Alex's Huge Double Classic</option>
+                    </select><br><br>
+                    <p id="burgerSize"><b>2. Choose the size of your burger:</b></p>
+                    <select id="burgerSize" name="burgerSize">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    <a id="sizeLink" href="#sizesTable">Take a look to our sizes table</a><br><br>
+                    <p><b>3. Optional, pimp your burger (This will have an aditional cost)</b></p>
+                    <input type="radio" id="bacon" name = "bacon" value="bacon">
+                    <label for="bacon">+bacon</label><br>
+                    <input type="radio" id="cheese" name = "cheese" value="cheese">
+                    <label for="cheese">+cheese</label><br>
+                    <input type="radio" id="onion" name = "onion" value="onion">
+                    <label for="onion">+onion rings</label>
+                    <input type="radio" id="patty" name = "patty" value="patty">
+                    <label for="patty">+extra patty</label><br><br>
+                    <p><b>4. If you want fries choose the size of them, if not skip this step</b></p>
+                    <input list="friesSize" name="friesSize">
+                    <datalist id = "friesSize">
+                        <option value="S"></option>
+                        <option value="M"></option>
+                        <option value="L"></option>
+                        <option value="XL"></option>
+                    </datalist><br><br>
+                    <p><b>5. If you want a beverage choose one, if not skip this step</b></p>
+                    <p>(We just have 12oz fl soda cans)</p>
+                    <input list="beverage" name="beverage">
+                    <datalist id = "beverage">
+                        <option value="Coke"></option>
+                        <option value="7up"></option>
+                        <option value="Dr. Pepper"></option>
+                        <option value="Mountain Dew"></option>
+                    </datalist><br><br>
+                    <button type="reset">Reset</button>
+                </fieldset>
+                <fieldset id="customerInfo">
+                    <legend class="legend"><b>Customer information</b></legend>
+                    <label for="fname">Name:</label><br>
+                    <input type="text" id="fname"><br>
+                    <label for="phoneNum">Phone number:</label><br>
+                    <input type="text" id="phoneNum"><br>
+                    <label for = "address">Delivery address:</label><br>
+                    <textarea id = "address"></textarea><br><br>
+                    <button type="reset">Reset</button>
+                </fieldset>
+                <fieldset id="paymentInfo">
+                    <legend class="legend"><b>Payment information</b></legend>
+                    <p>How do you want to pay?</p>
+                    <select id="payment" name="payment">
+                        <option value="Cash">Cash</option>
+                        <option value="Credit">Credit</option>
+                        <option value="Debit">Debit</option>
+                    </select>
+                </fieldset>
+                <input type="submit" value="Submit" onclick="alert('Your order has been placed')">
+                <button type="reset">Reset</button>
+            </form><br><br>
+        </div>
+        <hr>
+        <div id="sizesTable">
+            <table>
+                <tr>
+                    <th>SIZES TABLE</th>
+                </tr>
+                <tr>
+                    <th>BURGER SIZE</th>
+                    <th>PATTY WEIGHT</th>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>4oz</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>7oz</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>9oz</td>
+                </tr>
+                <tr>
+                    <td>XL</td>
+                    <td>13oz</td>
+                </tr>
+            </table>
+            <a href="#burgerSize">Go back to your order</a>
+        </div><br><br>
+        <footer id="footer">
+            <div class = "links">
+                <a class= "fbicon" href="https://www.facebook.com">
+                  <img src="fb.PNG" alt="Facebook icon" target="_blank">
+                </a>
+                <a class= "instaicon" href="https://www.instagram.com">
+                  <img src="ig.PNG" alt="Istagram icon" target="_blank">
+                </a>
+            </div>
+            <div class = "copyright">
+              <p class ="copy">&copy; Alex's Burger</p>
+            </div>
+        </footer>

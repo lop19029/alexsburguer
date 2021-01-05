@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Raleway:ital,wght@0,400;0,700;1,400&family=Zilla+Slab+Highlight:wght@400;700&family=Zilla+Slab:ital,wght@0,600;1,600&display=swap');
+/*Fonts List
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Zilla Slab', serif;
+font-family: 'Zilla Slab Highlight', cursive; */
+/*Style main nav*/
+a{
+    font-family: 'Raleway', sans-serif;
+}
+a:link{text-decoration: none; color: #fbfffe;}
+a:visited{text-decoration: none; color: #fbfffe;}
+.page_nav{font-family: 'Montserrat', sans-serif; color: #fbfffe;}
+body{background-color: #1b1b1e;}
+.head{background-color:#fbfffe;}
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
+#nav{
+    display: block;
+    text-align: center;
+    background-color: #faa916;
+    font-size: 2em;
+    margin-bottom: -10px;}
+#nav:hover{background-color:#96031a;}
+
+/*Style Buttons*/
+button, input[type=submit]{
+	background-color:#1b1b1e;
+	border-radius:28px;
+	border:1px solid #fbfffe;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+    margin-bottom: 5px;
+    margin-top: 5px;}
+button:hover , input[type=submit]:hover{
+	background-color:#96031a;}
+#especial2 button:hover{
+    background-color: #faa916;}
+
+footer{
+    font-family: 'Raleway', sans-serif;
+    color: #fbfffe;
+}
+
